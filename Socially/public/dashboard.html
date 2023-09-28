@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socially Website</title>
+    <style>
+        *{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+.hero{
+    min-height: 100vh;
+    background-image: url(https://cdn.glitch.global/7ca99681-0aee-4c30-a4e6-8557c965f164/back-image.png?v=1691923749595);
+    width: 100%;
+    background-image: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+  }
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+   }
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+   }
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transform-origin: right;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+  }
+  .navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+.navigation .btnlogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: blue;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+   }
+   .content{
+    margin-top:10% ;
+    max-width: 500px;
+}
+.content h1 {
+    font-size: 70px;
+    color: #222;
+}
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+.content .btn {
+    padding: 20px 80px;
+    color : white;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+.photo {
+    width: 500px;
+    position: absolute;
+    bottom:0;
+    right: 10%;
+    animation-delay:2s ;
+}
+.photo.anim {
+    animation-delay: 1.5s;
+}
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.glitch.global/ef73df5b-38ea-466e-93e2-61d5937261be/logo.png?v=1691861349854" class="logo">
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnlogin-popup">Logout</button>
+        </nav>
+    </header>
+    <div class="hero">
+        <nav>
+                <img src="https://cdn.glitch.global/ef73df5b-38ea-466e-93e2-61d5937261be/logo.png?v=1691861349854" class="logo">
+                    
+        </nav>
+        <div class="content">
+            <h1 class="anim">Make <br>New Friends!</h1>
+            <p class="anim">Socially is a website , where you con find new friends and interact with the persons in a easy manner!</p>
+        </div>
+        <img src="https://cdn.glitch.global/ef73df5b-38ea-466e-93e2-61d5937261be/pic.png?v=1691861495756" class="photo anim" >
+    </div>
+</body>
+</html>
